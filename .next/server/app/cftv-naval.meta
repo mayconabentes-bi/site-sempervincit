@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cftv-naval/layout,_N_T_/cftv-naval/page,_N_T_/cftv-naval"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cftv-naval/__PAGE__",
+    "/cftv-naval",
+    "/_index",
+    "/_head"
+  ]
+}

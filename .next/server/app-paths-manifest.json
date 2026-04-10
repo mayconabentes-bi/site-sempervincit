@@ -1,0 +1,19 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/academia/page": "app/academia/page.js",
+  "/admin/login/page": "app/admin/login/page.js",
+  "/admin/page": "app/admin/page.js",
+  "/cabeamento/page": "app/cabeamento/page.js",
+  "/carregadores/page": "app/carregadores/page.js",
+  "/cases/page": "app/cases/page.js",
+  "/cftv-naval/page": "app/cftv-naval/page.js",
+  "/cftv/page": "app/cftv/page.js",
+  "/contato/page": "app/contato/page.js",
+  "/insights/[slug]/page": "app/insights/[slug]/page.js",
+  "/insights/page": "app/insights/page.js",
+  "/internet/page": "app/internet/page.js",
+  "/page": "app/page.js",
+  "/pim/page": "app/pim/page.js",
+  "/sobre/page": "app/sobre/page.js"
+}

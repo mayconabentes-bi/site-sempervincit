@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { ArrowRight, Shield, Zap, Wifi, LucideIcon } from "lucide-react";
 
 interface HeroProps {
@@ -37,7 +37,7 @@ const Hero = ({
           {image && (
             <div
               className="absolute inset-0 bg-cover bg-center opacity-20"
-              style={{ backgroundImage: `url(${image})` }}
+              style={{ backgroundImage: `url(${typeof image === 'string' ? image : image.src})` }}
             />
           )}
           
@@ -106,7 +106,7 @@ const Hero = ({
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </a>
                 ) : (
-                  <Link to={ctaLink} className="flex items-center gap-2">
+                  <Link href={ctaLink} className="flex items-center gap-2">
                     {ctaText}
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -118,7 +118,7 @@ const Hero = ({
                 asChild 
                 className="text-lg h-14 px-8 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:border-white/50"
               >
-                <Link to="/sobre">Conheça a Empresa</Link>
+                <Link href="/sobre">Conheça a Empresa</Link>
               </Button>
             </div>
             
@@ -141,7 +141,7 @@ const Hero = ({
         {image && (
           <div
             className="absolute inset-0 bg-cover bg-center opacity-20"
-            style={{ backgroundImage: `url(${image})` }}
+            style={{ backgroundImage: `url(${typeof image === 'string' ? image : image.src})` }}
           />
         )}
         
@@ -223,7 +223,7 @@ const Hero = ({
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </a>
               ) : (
-                <Link to={ctaLink} className="flex items-center gap-2">
+                <Link href={ctaLink} className="flex items-center gap-2">
                   {ctaText}
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>

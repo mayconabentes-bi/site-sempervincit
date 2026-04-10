@@ -1,0 +1,19 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/academia/page": "/academia",
+  "/admin/login/page": "/admin/login",
+  "/admin/page": "/admin",
+  "/cabeamento/page": "/cabeamento",
+  "/carregadores/page": "/carregadores",
+  "/cases/page": "/cases",
+  "/cftv-naval/page": "/cftv-naval",
+  "/cftv/page": "/cftv",
+  "/contato/page": "/contato",
+  "/insights/[slug]/page": "/insights/[slug]",
+  "/insights/page": "/insights",
+  "/internet/page": "/internet",
+  "/page": "/",
+  "/pim/page": "/pim",
+  "/sobre/page": "/sobre"
+}

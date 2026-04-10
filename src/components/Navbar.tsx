@@ -1,5 +1,7 @@
+"use client";
 import { useState, useRef, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Headset } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/semper-vincit-logo.png";
@@ -7,7 +9,7 @@ import logo from "@/assets/semper-vincit-logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showSolucoes, setShowSolucoes] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
@@ -29,7 +31,7 @@ const Navbar = () => {
     { name: "Carregadores", path: "/carregadores" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
   const isSolucoesActive = solucoesLinks.some((l) => isActive(l.path));
 
   const handleMouseEnter = () => {
@@ -51,8 +53,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="Semper Vincit - Integradora de Soluções de TI em Manaus" className="h-12" />
+          <Link href="/" className="flex items-center">
+            <img src={typeof logo === 'string' ? logo : logo.src} alt="Semper Vincit - Integradora de Soluções de TI em Manaus" className="h-12" />
           </Link>
 
           {/* Desktop Menu */}
@@ -60,7 +62,7 @@ const Navbar = () => {
             {mainLinks.slice(0, 1).map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-muted ${
                   isActive(link.path) ? "text-primary bg-muted" : "text-foreground/70"
                 }`}
@@ -90,7 +92,7 @@ const Navbar = () => {
                   {solucoesLinks.map((link) => (
                     <Link
                       key={link.path}
-                      to={link.path}
+                      href={link.path}
                       className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted ${
                         isActive(link.path) ? "text-primary font-semibold bg-muted" : "text-foreground/70"
                       }`}
@@ -105,7 +107,7 @@ const Navbar = () => {
             {mainLinks.slice(1).map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={`px-3 py-2 text-sm font-medium rounded-lg transition-colors hover:bg-muted ${
                   isActive(link.path) ? "text-primary bg-muted" : "text-foreground/70"
                 }`}
@@ -116,7 +118,7 @@ const Navbar = () => {
 
             <div className="flex items-center gap-2 ml-4">
               <Button variant="outline" size="sm" asChild className="gap-2 text-xs border-primary/20 hover:border-primary">
-                <Link to="/contato">
+                <Link href="/contato">
                   <Headset size={14} />
                   Suporte
                 </Link>
@@ -146,7 +148,7 @@ const Navbar = () => {
               {mainLinks.map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`px-3 py-2.5 text-sm font-medium rounded-lg transition-colors ${
                     isActive(link.path) ? "text-primary bg-muted" : "text-foreground/70"
@@ -161,7 +163,7 @@ const Navbar = () => {
                 {solucoesLinks.map((link) => (
                   <Link
                     key={link.path}
-                    to={link.path}
+                    href={link.path}
                     onClick={() => setIsOpen(false)}
                     className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
                       isActive(link.path) ? "text-primary bg-muted" : "text-foreground/70"
@@ -174,7 +176,7 @@ const Navbar = () => {
 
               <div className="flex flex-col gap-2 mt-2 px-3">
                 <Button variant="outline" size="sm" asChild className="w-full gap-2">
-                  <Link to="/contato" onClick={() => setIsOpen(false)}>
+                  <Link href="/contato" onClick={() => setIsOpen(false)}>
                     <Headset size={14} />
                     Suporte Técnico
                   </Link>

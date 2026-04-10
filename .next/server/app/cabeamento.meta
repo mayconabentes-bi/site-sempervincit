@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/cabeamento/layout,_N_T_/cabeamento/page,_N_T_/cabeamento"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/cabeamento/__PAGE__",
+    "/cabeamento",
+    "/_index",
+    "/_head"
+  ]
+}

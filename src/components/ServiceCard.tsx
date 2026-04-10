@@ -1,19 +1,19 @@
 import { ReactNode } from "react";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";;
+import { LucideIcon, ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
-  icon: ReactNode;
+  icon: LucideIcon;
   title: string;
   description: string;
   link: string;
 }
 
-const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => {
+const ServiceCard = ({ icon: Icon, title, description, link }: ServiceCardProps) => {
   return (
     <Link 
-      to={link}
+      href={link}
       className="group relative block"
     >
       <div className="relative overflow-hidden rounded-2xl bg-card border border-border p-8 h-full transition-all duration-500 hover:shadow-[var(--shadow-card-hover)] hover:border-secondary/30 hover:-translate-y-2">
@@ -23,7 +23,7 @@ const ServiceCard = ({ icon, title, description, link }: ServiceCardProps) => {
         {/* Icon */}
         <div className="relative mb-6">
           <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white group-hover:scale-110 group-hover:shadow-lg transition-all duration-300">
-            {icon}
+            <Icon className="w-8 h-8" />
           </div>
           <div className="absolute -inset-2 bg-secondary/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";;
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
 import logo from "@/assets/semper-vincit-logo.png";
 
@@ -29,27 +29,27 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Soluções</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
-                <Link to="/cftv" className="hover:text-secondary transition-colors">
+                <Link href="/cftv" className="hover:text-secondary transition-colors">
                   CFTV e Segurança Eletrônica
                 </Link>
               </li>
               <li>
-                <Link to="/cabeamento" className="hover:text-secondary transition-colors">
+                <Link href="/cabeamento" className="hover:text-secondary transition-colors">
                   Cabeamento Estruturado
                 </Link>
               </li>
               <li>
-                <Link to="/internet" className="hover:text-secondary transition-colors">
+                <Link href="/internet" className="hover:text-secondary transition-colors">
                   Internet Dedicada
                 </Link>
               </li>
               <li>
-                <Link to="/carregadores" className="hover:text-secondary transition-colors">
+                <Link href="/carregadores" className="hover:text-secondary transition-colors">
                   Carregadores Elétricos
                 </Link>
               </li>
               <li>
-                <Link to="/pim" className="hover:text-secondary transition-colors font-semibold text-secondary/80">
+                <Link href="/pim" className="hover:text-secondary transition-colors font-semibold text-secondary/80">
                   Polo Industrial de Manaus
                 </Link>
               </li>
@@ -61,27 +61,27 @@ const Footer = () => {
             <h3 className="font-bold text-lg mb-4">Empresa</h3>
             <ul className="space-y-2 text-sm text-primary-foreground/80">
               <li>
-                <Link to="/sobre" className="hover:text-secondary transition-colors">
+                <Link href="/sobre" className="hover:text-secondary transition-colors">
                   Sobre Nós
                 </Link>
               </li>
               <li>
-                <Link to="/insights" className="hover:text-secondary transition-colors font-semibold">
+                <Link href="/insights" className="hover:text-secondary transition-colors font-semibold">
                   Insights / Blog
                 </Link>
               </li>
               <li>
-                <Link to="/cases" className="hover:text-secondary transition-colors">
+                <Link href="/cases" className="hover:text-secondary transition-colors">
                   Cases de Sucesso
                 </Link>
               </li>
               <li>
-                <Link to="/academia" className="hover:text-secondary transition-colors">
+                <Link href="/academia" className="hover:text-secondary transition-colors">
                   Academia Semper Vincit
                 </Link>
               </li>
               <li>
-                <Link to="/contato" className="hover:text-secondary transition-colors">
+                <Link href="/contato" className="hover:text-secondary transition-colors">
                   Contato
                 </Link>
               </li>
