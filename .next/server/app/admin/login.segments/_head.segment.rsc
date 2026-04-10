@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[97367,["/_next/static/chunks/0f_jdvn023d3v.js","/_next/static/chunks/16qtvpqq59w2x.js","/_next/static/chunks/0c0x.fwk7zl0h.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0cenf-v1u64lg.js"],"ViewportBoundary"]
-3:I[97367,["/_next/static/chunks/0f_jdvn023d3v.js","/_next/static/chunks/16qtvpqq59w2x.js","/_next/static/chunks/0c0x.fwk7zl0h.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0cenf-v1u64lg.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Integradora de Soluções de Alta Performance em TI | Manaus - AM"}],["$","meta","1",{"name":"description","content":"A Semper Vincit é líder em TI e Infraestrutura para o Polo Industrial de Manaus (PIM)."}]]}]}]}],null]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"32iCgAeqfBw9meRU8xQGg"}
