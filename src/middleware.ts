@@ -39,7 +39,7 @@ export const updateSession = async (request: NextRequest) => {
   return supabaseResponse
 };
 
-export async function proxy(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   return await updateSession(request)
 }
 
